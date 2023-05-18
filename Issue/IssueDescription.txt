@@ -1,0 +1,8 @@
+When we insert multiple 2D dwg models into the viewer, their scale is incorrect.  The geometry seems to size to fill the 
+approximate area that the previous model occupied. It is very unsual. 
+
+Screenshots:
+drawing1.png - 1x.dwg in the viewer.  (1.0 x 1.0 square)
+drawing2.png - 10x.dwg in the viewer (10.0 x 10.0 square)
+overlapped.png - Both drawings loaded in the viewer, they occupy the same space. ????
+

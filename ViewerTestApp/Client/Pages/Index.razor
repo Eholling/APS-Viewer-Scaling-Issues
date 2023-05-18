@@ -1,0 +1,25 @@
+﻿@page "/"
+@inject IJSRuntime JS
+
+
+
+@code {
+    private string forgeToken = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        List<string> ourUrns = new List<string>();
+        
+        //2D 1x, 10x, 100x, 1000x
+        ourUrns.Add("base64 of 1x.dwg");
+        ourUrns.Add("base64 of 10x.dwg");
+    
+        ViewerTestApp.Shared.ForgeAccessToken token = await ViewerTestApp.Shared.Authenticate.GetAccessToken("CLIENT_ID", "SECRET");
+        forgeToken = token.access_token;
+
+        await JS.InvokeVoidAsync("launchViewer", forgeToken);
+        await JS.InvokeVoidAsync("loadModel", ourUrns[0]);
+        await JS.InvokeVoidAsync("loadModel", ourUrns[1]);
+        
+    }
+}

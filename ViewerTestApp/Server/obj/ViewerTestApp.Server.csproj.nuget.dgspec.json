@@ -1,0 +1,230 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Server\\ViewerTestApp.Server.csproj": {}
+  },
+  "projects": {
+    "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Client\\ViewerTestApp.Client.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Client\\ViewerTestApp.Client.csproj",
+        "projectName": "ViewerTestApp.Client",
+        "projectPath": "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Client\\ViewerTestApp.Client.csproj",
+        "packagesPath": "C:\\Users\\dmartin3\\.nuget\\packages\\",
+        "outputPath": "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Client\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dmartin3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/steelcase/Design/_packaging/onedesign/nuget/v3/index.json": {},
+          "https://steelcase.pkgs.visualstudio.com/_packaging/public/nuget/v3/index.json": {},
+          "https://steelcase.pkgs.visualstudio.com/_packaging/toolkits/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Shared\\ViewerTestApp.Shared.csproj": {
+                "projectPath": "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Shared\\ViewerTestApp.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[6.0.14, 6.0.14]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
+        }
+      }
+    },
+    "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Server\\ViewerTestApp.Server.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Server\\ViewerTestApp.Server.csproj",
+        "projectName": "ViewerTestApp.Server",
+        "projectPath": "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Server\\ViewerTestApp.Server.csproj",
+        "packagesPath": "C:\\Users\\dmartin3\\.nuget\\packages\\",
+        "outputPath": "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Server\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dmartin3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/steelcase/Design/_packaging/onedesign/nuget/v3/index.json": {},
+          "https://steelcase.pkgs.visualstudio.com/_packaging/public/nuget/v3/index.json": {},
+          "https://steelcase.pkgs.visualstudio.com/_packaging/toolkits/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Client\\ViewerTestApp.Client.csproj": {
+                "projectPath": "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Client\\ViewerTestApp.Client.csproj"
+              },
+              "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Shared\\ViewerTestApp.Shared.csproj": {
+                "projectPath": "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Shared\\ViewerTestApp.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.WebAssembly.Server": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Shared\\ViewerTestApp.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Shared\\ViewerTestApp.Shared.csproj",
+        "projectName": "ViewerTestApp.Shared",
+        "projectPath": "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Shared\\ViewerTestApp.Shared.csproj",
+        "packagesPath": "C:\\Users\\dmartin3\\.nuget\\packages\\",
+        "outputPath": "C:\\Working\\ViewerTestApp\\ViewerTestApp\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dmartin3\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/steelcase/Design/_packaging/onedesign/nuget/v3/index.json": {},
+          "https://steelcase.pkgs.visualstudio.com/_packaging/public/nuget/v3/index.json": {},
+          "https://steelcase.pkgs.visualstudio.com/_packaging/toolkits/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

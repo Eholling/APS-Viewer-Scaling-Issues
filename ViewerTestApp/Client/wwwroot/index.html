@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>ViewerTestApp</title>
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="ViewerTestApp.Client.styles.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/style.min.css" type="text/css">
+
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/7.*/viewer3D.min.js"></script>
+    <script src="js/PropertyPanel.js"></script>
+    <script src="js/ImprovedVisualExtension.js"></script>
+</head>
+
+<body>    
+    <div id="app"></div>
+    <div id="forgeViewer" class="h-100 bg-secondary">
+    </div>
+        <script src="_framework/blazor.webassembly.js"></script>
+
+        <script>
+            Autodesk.Viewing.theExtensionManager.registerExtension('CustomPropertyPanelExtension', CustomPropertyPanelExtension);
+            var changedEventRan = false;            
+            var viewer;
+            var viewerMode = "viewer";
+            var dotNetResultViewerReference = null;
+
+            async function launchViewer(accessToken) {
+                var options = {
+                    env: "AutodeskProduction",
+                    getAccessToken: (callback) => callback(accessToken, 3600),
+                    language: 'en'
+                };
+
+                Autodesk.Viewing.Initializer(options, () => {                    
+                    viewer = new Autodesk.Viewing.GuiViewer3D(document.getElementById('forgeViewer'));
+                    viewer.start();
+                });
+            }
+
+            function onDocumentLoadSuccess(doc) {
+                const viewable = doc.getRoot().getDefaultGeometry();
+                const options = {                    
+                    keepCurrentModels: true,                    
+                    placementTransform: (new THREE.Matrix4()).setPosition({ x: 0, y: 0, z: 0 }),                    
+                    //Scaling, units, none of it seems to work here.
+                };
+                viewer.loadDocumentNode(doc, viewable, options)
+                    .then(resolve)
+                    .catch(reject);                
+            }
+
+            function onDocumentLoadFailure(viewerErrorCode, viewerErrorMsg) {
+                console.error(
+                    "onDocumentLoadFailure() - errorCode:" +
+                    viewerErrorCode +
+                    "\n- errorMessage:" +
+                    viewerErrorMsg
+                );
+            }
+
+            function shutdownViewer() {
+                viewer.finish();
+                viewer = null;
+                Autodesk.Viewing.shutdown();
+            }
+
+            function getViewer() {
+                let v = NOP_VIEWERS.lastItem;
+                if (v != null) return v;
+                return NOP_VIEWER;
+            }
+
+            function loadModel(urn) {
+                viewer = getViewer();                
+                    Autodesk.Viewing.Document.load(`urn:${urn}`, (doc) => {
+                        var viewables = doc.getRoot().getDefaultGeometry(true);                        
+                        viewer.loadDocumentNode(doc, viewables, {                            
+                            keepCurrentModels: true,                            
+                        })                         
+                            .then(onLoadFinished);
+                    });
+
+                function onLoadFinished(doc) {
+                    console.log('loaded');
+                }
+            }
+        </script>
+</body>
+
+</html>

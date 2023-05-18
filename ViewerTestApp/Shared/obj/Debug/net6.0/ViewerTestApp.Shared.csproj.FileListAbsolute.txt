@@ -1,0 +1,12 @@
+C:\Working\ViewerTestApp\ViewerTestApp\Shared\bin\Debug\net6.0\ViewerTestApp.Shared.deps.json
+C:\Working\ViewerTestApp\ViewerTestApp\Shared\bin\Debug\net6.0\ViewerTestApp.Shared.dll
+C:\Working\ViewerTestApp\ViewerTestApp\Shared\bin\Debug\net6.0\ViewerTestApp.Shared.pdb
+C:\Working\ViewerTestApp\ViewerTestApp\Shared\obj\Debug\net6.0\ViewerTestApp.Shared.csproj.AssemblyReference.cache
+C:\Working\ViewerTestApp\ViewerTestApp\Shared\obj\Debug\net6.0\ViewerTestApp.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Working\ViewerTestApp\ViewerTestApp\Shared\obj\Debug\net6.0\ViewerTestApp.Shared.AssemblyInfoInputs.cache
+C:\Working\ViewerTestApp\ViewerTestApp\Shared\obj\Debug\net6.0\ViewerTestApp.Shared.AssemblyInfo.cs
+C:\Working\ViewerTestApp\ViewerTestApp\Shared\obj\Debug\net6.0\ViewerTestApp.Shared.csproj.CoreCompileInputs.cache
+C:\Working\ViewerTestApp\ViewerTestApp\Shared\obj\Debug\net6.0\ViewerTestApp.Shared.dll
+C:\Working\ViewerTestApp\ViewerTestApp\Shared\obj\Debug\net6.0\refint\ViewerTestApp.Shared.dll
+C:\Working\ViewerTestApp\ViewerTestApp\Shared\obj\Debug\net6.0\ViewerTestApp.Shared.pdb
+C:\Working\ViewerTestApp\ViewerTestApp\Shared\obj\Debug\net6.0\ref\ViewerTestApp.Shared.dll

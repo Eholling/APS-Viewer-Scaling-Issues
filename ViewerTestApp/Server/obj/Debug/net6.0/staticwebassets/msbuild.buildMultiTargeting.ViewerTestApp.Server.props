@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ViewerTestApp.Server.props" />
+</Project>
